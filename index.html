@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity 宣言チェック</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <h1 id="resultText">正解！</h1>
+        </div>
+    </div>
+    <header>
+        <h1><i class="fa-brands fa-unity fa-lg"></i> Unity 宣言チェック</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>問題</h2>
+            <p>Inspector に以下の通りに表示されるように、正しい宣言を入力してください。</p>
+            <div id="queText"></div>
+        </section>
+        
+        <section>
+            <h2>解答欄</h2>
+            <input type="text" id="userInput" placeholder="ここに入力してね">
+            <button onclick="checkAnswer()">チェック</button>
+        </section>
+    </div>
+    <div class="container">
+        <section>
+            <h2>履歴</h2>
+            <details id="history">
+                <summary>履歴一覧</summary>
+            </details>
+        </section>
+        <section>
+            <h2>使い方</h2>
+            <details>
+                <summary>チュートリアル</summary>
+                Inspector っぽい UI が登場するので、それに対応するような宣言を入力してください。ここで、例題を解いて見ましょう。
+                <h3>例題</h3>
+                <div class="field"><div class="valname">Hoge</div><div class="valfield">12</div></div>
+                　アクセス修飾子は、このサイトの場合、すべて public であるものとします。<br>
+                　このときの型について考えてみましょう。表示が「12」となっているので、整数型の int を選べば適切ですね。<br>
+                　最後に変数名を考えます。「Hoge」となっている訳ですが、Unityをよく見てみると、すべての変数名が大文字から始まっています。
+                また、C# の変数の命名規則に則っても、ここは hoge とするのが適切です。<br>
+                　最後に忘れないでほしいのが、; (セミコロン)の存在です。これを踏まえると模範解答は以下の通りになります。
+                <h3>模範解答</h3>
+                <p class=inHistory>public int hoge;</p>
+                これ以外にも、コンパイルエラーとならない箇所でのスペース等の記号は正答となるはずです！<br>
+                是非とも変数の宣言を修得しましょう！！
+            </details>
+        </section>
+    </div>
+</body>
+</html>
